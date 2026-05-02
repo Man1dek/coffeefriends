@@ -29,7 +29,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
+html { scroll-behavior: smooth; overflow-x: hidden; width: 100%; max-width: 100%; }
 
 body {
     font-family: var(--font-b);
@@ -40,6 +40,7 @@ body {
     background-color: var(--cream);
     overflow-x: hidden;
     width: 100%;
+    max-width: 100%;
 }
 
 ::selection {
@@ -366,12 +367,18 @@ body.nav-open .hamburger {
     flex-direction: column;
     background: var(--espresso);
     padding-top: 60px;
-    min-height: auto;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     overflow: visible;
+    z-index: 1;
 }
 
 .hero-image {
     width: 100%;
+    max-width: 100%;
     height: auto;
     order: -1;
     overflow: visible;
@@ -390,7 +397,6 @@ body.nav-open .hamburger {
     object-position: center;
     background: var(--roast);
     filter: brightness(0.92) saturate(1.1) sepia(0.15);
-    box-sizing: border-box;
 }
 
 .hero-vignette {
@@ -411,6 +417,7 @@ body.nav-open .hamburger {
     position: relative;
     z-index: 3;
     margin-top: -30px;
+    width: 100%;
 }
 
 /* Mobile version for hero image */
@@ -1082,11 +1089,19 @@ body.nav-open .hamburger {
     .hero {
       flex-direction: row-reverse;  /* Text left, Image right */
       min-height: 100vh;
-      align-items: stretch;
+      align-items: center;
       padding-top: 0;
+      width: 100%;
+      max-width: 100%;
+      left: auto;
+      right: auto;
+      margin-left: 0;
+      margin-right: 0;
     }
     .hero-image {
       flex: 1;
+      width: 100%;
+      max-width: none;
       height: 100%;
       min-height: 500px;
     }
@@ -1096,8 +1111,9 @@ body.nav-open .hamburger {
     }
     .hero-content {
       flex: 1;
-      padding: 4rem 5%;
+      padding: 3rem 5%;
       flex: 1 0 55%;
+      margin-top: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
