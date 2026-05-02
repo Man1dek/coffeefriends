@@ -1080,7 +1080,7 @@ body.nav-open .hamburger {
 
     /* Hero */
     .hero {
-      flex-direction: row;  /* Side by side */
+      flex-direction: row-reverse;  /* Text left, Image right */
       min-height: 100vh;
       align-items: center;
       padding-top: 0;
