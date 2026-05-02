@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     
+    const isTouchDevice = () => window.matchMedia('(hover: none)').matches;
 
+    if (isTouchDevice()) {
+        const grain = document.getElementById('grain');
+        if (grain) grain.style.animation = 'none';
+    }
 
     // --- Loading Bar ---
     const loadingBar = document.getElementById('loading-bar');
@@ -36,6 +41,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const galleryItems = document.querySelectorAll('.g-item');
     const craftWatermark = document.querySelector('.craft-watermark');
 
+    // Disable parallax entirely if touch device
+    if (isTouchDevice() && heroImg) {
+        heroImg.classList.remove('float-anim');
+        heroImg.style.transform = 'none';
+    }
+
     window.addEventListener('scroll', () => {
         const scrolled = window.scrollY;
 
@@ -49,12 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Parallax on hero image (desktop only)
-        if (heroImg && window.innerWidth > 1024) {
+        if (heroImg && window.innerWidth > 1024 && !isTouchDevice()) {
             heroImg.style.transform = `translateY(${scrolled * 0.3}px)`;
         }
 
         // Gallery tilt on scroll (non-touch)
-        if (!isTouch() && window.innerWidth > 768) {
+        if (!isTouchDevice() && window.innerWidth > 768) {
             galleryItems.forEach(item => {
                 const rect = item.getBoundingClientRect();
                 const center = window.innerHeight / 2;

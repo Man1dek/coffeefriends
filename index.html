@@ -47,7 +47,20 @@
 
     <!-- HERO -->
     <header class="hero">
-        <div class="hero-inner">
+        <div class="hero-image">
+            <img class="hero-img-main float-anim" 
+                 src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=1000&q=85&fit=crop"
+                 srcset="
+                   https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=600&q=80&fit=crop 600w,
+                   https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=1000&q=85&fit=crop 1000w,
+                   https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=1400&q=85&fit=crop 1400w
+                 "
+                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 70vw, 50vw"
+                 alt="Coffee Friends premium gold sachet with fresh coffee beans"
+                 fetchpriority="high" loading="eager">
+        </div>
+
+        <div class="hero-content">
             <div class="hero-watermark" role="img" aria-label="01">01</div>
             
             <div class="hero-label-wrap scroll-reveal">
@@ -61,25 +74,12 @@
             
             <a href="#produkti" class="hero-cta scroll-reveal delay-2">ZBULO PRODUKTIN</a>
             
-            <p class="hero-sub scroll-reveal delay-2">La qualità la nostra passione — Coffee Friends Albania, Elbasan.</p>
+            <p class="hero-subtitle scroll-reveal delay-2">La qualità la nostra passione — Coffee Friends Albania, Elbasan.</p>
             
             <div class="scroll-indicator scroll-reveal delay-2">
                 <div class="line"></div>
                 <span>ZBULO</span>
             </div>
-        </div>
-        
-        <div class="hero-images">
-            <img class="hero-img-main float-anim" 
-                 src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=1000&q=85&fit=crop"
-                 srcset="
-                   https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=600&q=80&fit=crop 600w,
-                   https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=1000&q=85&fit=crop 1000w,
-                   https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=1400&q=85&fit=crop 1400w
-                 "
-                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 70vw, 50vw"
-                 alt="Coffee Friends premium gold sachet with fresh coffee beans"
-                 fetchpriority="high">
         </div>
     </header>
 
@@ -105,48 +105,48 @@
         <div class="section-counter">— 01</div>
         <div class="products-watermark" role="img" aria-label="KAFEJE">KAFEJE</div>
         
-        <div class="product-cards">
+        <div class="products-grid">
             <div class="product-card card-tall">
-                <div class="product-img-wrap">
+                <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=700&q=80&fit=crop"
                          srcset="https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=400&q=75&fit=crop 400w, https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=700&q=80&fit=crop 700w"
                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 45vw, 30vw"
                          alt="Espresso coffee with rich crema" loading="eager">
                     <div class="warm-overlay"></div>
                 </div>
-                <div class="product-card-body">
-                    <span class="label-gold">ESPRESSO · INTENSITET I PLOTË</span>
+                <div class="product-body">
+                    <span class="product-label">ESPRESSO · INTENSITET I PLOTË</span>
                     <h3>Kafeje Espresso</h3>
                     <p>E zezë, e fortë, pa kompromis. Kjo është kafe siç duhet të jetë.</p>
                 </div>
             </div>
             
             <div class="product-card featured card-featured">
-                <div class="product-img-wrap featured-wrap">
+                <div class="product-image featured-wrap">
                     <img src="https://images.unsplash.com/photo-1572119865084-43c285814d63?w=700&q=80&fit=crop"
                          srcset="https://images.unsplash.com/photo-1572119865084-43c285814d63?w=400&q=75&fit=crop 400w, https://images.unsplash.com/photo-1572119865084-43c285814d63?w=700&q=80&fit=crop 700w"
                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 45vw, 30vw"
                          alt="Bustina kafeje gold packaging" loading="eager">
                     <div class="warm-overlay"></div>
-                    <div class="featured-badge">BESTSELLER</div>
+                    <div class="product-badge">BESTSELLER</div>
                 </div>
-                <div class="product-card-body">
-                    <span class="label-gold">BUSTINA KAFEJE</span>
+                <div class="product-body">
+                    <span class="product-label">BUSTINA KAFEJE</span>
                     <h3>Gold Edition</h3>
                     <p>Çdo bustinë mbyllet me dorë. Aroma mbetet e paprekur deri në filxhanin tuaj.</p>
                 </div>
             </div>
             
             <div class="product-card card-short">
-                <div class="product-img-wrap">
+                <div class="product-image">
                     <img src="https://images.unsplash.com/photo-1495474472207-46424b492716?w=700&q=80&fit=crop"
                          srcset="https://images.unsplash.com/photo-1495474472207-46424b492716?w=400&q=75&fit=crop 400w, https://images.unsplash.com/photo-1495474472207-46424b492716?w=700&q=80&fit=crop 700w"
                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 45vw, 30vw"
                          alt="Porosi private" loading="eager">
                     <div class="warm-overlay"></div>
                 </div>
-                <div class="product-card-body">
-                    <span class="label-gold">PËR BIZNESET</span>
+                <div class="product-body">
+                    <span class="product-label">PËR BIZNESET</span>
                     <h3>Porosi Private</h3>
                     <p>Bar, restorant, zyrë — dërgojmë kudo në Shqipëri. <a href="#contact" class="inline-link">Na shkruani sot.</a></p>
                 </div>
@@ -166,7 +166,7 @@
         <div class="section-counter">— 02</div>
         <div class="craft-watermark" role="img" aria-label="KUALITET">KUALITET</div>
         
-        <div class="craft-grid">
+        <div class="craft-content">
             <div class="craft-text scroll-reveal">
                 <span class="label-gold">HISTORIA JONË</span>
                 <h2>Obsesion me<br>cilësinë.</h2>
