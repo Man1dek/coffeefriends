@@ -1089,18 +1089,10 @@ body.nav-open .hamburger {
       flex: 1;
       height: 100%;
       min-height: 500px;
-      position: absolute;
-      right: 5%;
-      bottom: -60px; /* Overlap next section */
-      width: 80%;
-      max-width: 520px;
-      height: 85vh;
-      z-index: 2;
     }
-    .hero-img-main::after {
-        content: ''; position: absolute; inset: 0;
-        background: radial-gradient(ellipse at center, transparent 40%, rgba(17, 8, 3, 0.5) 100%);
-        pointer-events: none;
+    .hero-image img {
+      height: 100%;
+      object-fit: cover;
     }
     .hero-content {
       flex: 1;
